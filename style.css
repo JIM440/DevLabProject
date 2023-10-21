@@ -81,13 +81,12 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  order: 2;
   align-items: center;
   justify-content: center;
 }
 @media (min-width: 700px) {
   .even-columns > .text {
-    order: 2;
+    order: 1;
   }
   .even-columns {
     grid-template-columns: 1fr 1fr;
