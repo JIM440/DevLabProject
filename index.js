@@ -1,4 +1,4 @@
-// replace big image with small images when clicked
+// replace big image src when small image is clicked
 const bigImages = document.querySelectorAll('.large-image-container > img')
 const smallImages = document.querySelectorAll('.small-image > img')
 
@@ -14,13 +14,13 @@ smallImages.forEach(smallImage => {
             }
         })
     })
-})
-// // full size image
-// const fullscreen = document.querySelector('.expand')
-// fullscreen.addEventListener('click', () => {
-    
-// })
+}) 
 
+// wishlist
+const addWishlist = document.querySelector('.add-wishlist')
+addWishlist.addEventListener('click', ()=>{
+    addWishlist.classList.toggle('active')
+})
 
 // tabs for product page
 const tabBtns = document.querySelectorAll('.tab-btn')
@@ -54,6 +54,8 @@ stars.forEach((star, index) => {
 // add reviews
 const reviewContainer = document.querySelector('.add-review-container')
 
+const textareaReview = document.querySelector('.add-review-form textarea')
+
 const addReview = document.querySelector('.add-review')
 
 const closeReview = document.querySelector('.close-review')
@@ -64,6 +66,7 @@ addReview.addEventListener('click', () =>{
 closeReview.addEventListener('click', () =>{
     reviewContainer.classList.remove('active')
     removeActiveClass(stars, 'active')
+    textareaReview.value = ''
 })
 
 // general functions
