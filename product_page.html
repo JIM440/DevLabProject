@@ -31,7 +31,7 @@
     </header>
 
     <!-- product (section 1) -->
-    <section id="product__purchase">
+    <section id="product-purchase">
       <div class="container">
         <!-- product section container -->
         <div class="product-container">
@@ -146,20 +146,21 @@
     <section id="product-details">
       <div class="container">
         <div class="product-details-tab-container">
+            <!-- tab buttons -->
           <div class="product-tab-buttons">
-            <button class="tab-btn active">Detailed Information</button>
-            <button class="tab-btn">Dimensions</button>
-            <button class="tab-btn">Popular Configuration</button>
+            <button class="tab-btn active" data-tab-target="#detail-info">Detailed Information</button>
+            <button class="tab-btn" data-tab-target="#dimension">Dimensions</button>
+            <button class="tab-btn" data-tab-target="#popular-config"> Popular Configuration</button>
           </div>
+
+          <!-- tab contents -->
           <div class="tab-content-container">
-            <div class="tab-content" id="detail-info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              dignissimos?
+            <div class="tab-content active" id="detail-info">
+                User-friendly features like intuitive controls, adjustable airflow settings, and noise reduction technology make nebulizers easy to use and comfortable for individuals seeking respiratory relief.
             </div>
-            <div class="tab-content" id="dimension" lorem10></div>
+            <div class="tab-content" id="dimension">Compact and portable, nebulizers come in various sizes to suit different needs. From handheld units to tabletop models, their dimensions are designed for convenience and mobility.</div>
             <div class="tab-content" id="popular-config">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
-              perspiciatis.
+                Handheld, tabletop, and portable nebulizer kits are the popular configurations available, offering portability, stability, and flexibility in managing respiratory conditions.
             </div>
           </div>
         </div>
@@ -177,64 +178,56 @@
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i<i class="bi bi-chevron-right"></i></a>
           </div>
           <div class="related-product flex-col">
             <div class="product-img"><img src="" alt="" /></div>
             <h2 class="product-name">Hello</h2>
             <p class="product-description">Hello</p>
             <a href="" class="link"
-              >Buy&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i
-            ></a>
+              >Buy&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -264,8 +257,10 @@
               </p>
             </div>
             <button class="add-review btn">Write a review</button>
+            <!-- review form -->
             <div class="add-review-container">
-              <form action="" class="add-review-form">
+                
+              <form action="" class="add-review-form"><button class="close-review"><i class="bi bi-x"></i></button>
                 <div class="user-details flex-row">
                   <div class="letter"><p>T</p></div>
                   <p class="name">Maja Salvador</p>
@@ -483,8 +478,7 @@
             </div>
           </div>
           <a href="" class="see-more link"
-            >See More&nbsp;<i class="bx bx-right-arrow-alt"></i
-          ></a>
+            >See All Reviews</a>
         </div>
       </div>
     </section>
