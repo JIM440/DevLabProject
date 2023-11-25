@@ -389,7 +389,9 @@ text-decoration: underline;
     font-weight: 400;
 }
 
-
+.discount{
+    color: red;
+}
 /* ================= media querries ============== */
 @media (max-width: 950px){
     .product-container{
@@ -408,4 +410,10 @@ text-decoration: underline;
         width: 100%;
     }
 
+}
+
+@media (max-width: 500px){
+    p{
+        font-size: 14px;
+    }
 }
