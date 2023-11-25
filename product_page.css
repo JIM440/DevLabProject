@@ -145,7 +145,6 @@
     visibility: hidden;
     width: 0px;
     height:max-content;
-    flex: 1;
 }
 .large-image-container img.visible{
    visibility: visible;
@@ -252,8 +251,7 @@ text-decoration: underline;
 }
 .product-tab-buttons{
     display: flex;
-    
-    width: fit-content;
+    width: 100%;
 }
 .product-tab-buttons .tab-btn{
     padding: 10px;
@@ -261,6 +259,7 @@ text-decoration: underline;
     border-bottom: none;
     font-size: 1rem;
     background-color: var(--dark-bg-grey);
+    width: 100%;
 }
 .product-tab-buttons .tab-btn:hover, .product-tab-buttons .tab-btn.active{
     background-color: #fff;
@@ -468,5 +467,9 @@ text-decoration: underline;
     }
     textarea{
         font-size: 14px;
+    }
+    .product-tab-buttons .tab-btn{
+        padding: 6px;
+        font-size: 0.8rem;
     }
 }
