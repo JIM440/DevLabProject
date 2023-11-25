@@ -138,6 +138,18 @@
     padding: 16px;
     background-color: var(--light-bg-grey);
    height: 100%;
+   display: flex;
+   overflow-x: hidden;
+}
+.large-image-container img{
+    visibility: hidden;
+    width: 0px;
+    height:max-content;
+    flex: 1;
+}
+.large-image-container img.visible{
+   visibility: visible;
+   width: 100%;
 }
 
 /* small container */

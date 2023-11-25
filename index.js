@@ -1,5 +1,20 @@
 // replace big image with small images when clicked
+const bigImages = document.querySelectorAll('.large-image-container > img')
+const smallImages = document.querySelectorAll('.small-image > img')
 
+smallImages.forEach(smallImage => {
+    smallImage.addEventListener('click', ()=>{
+        removeActiveClassParent(smallImages, 'active')
+        removeActiveClass(bigImages, 'visible')
+        smallImage.parentElement.classList.add('active')
+
+        bigImages.forEach(bigImage => {
+            if(bigImage.src == smallImage.src){
+                bigImage.classList.add('visible')
+            }
+        })
+    })
+})
 // // full size image
 // const fullscreen = document.querySelector('.expand')
 // fullscreen.addEventListener('click', () => {
@@ -58,7 +73,7 @@ const removeActiveClassParent = (items, className)=>{
         item.parentElement.classList.remove(className)
     });
 }
-const removeActiveClass = (items, className)=>{
+const removeActiveClass = (items, className) => {
     items.forEach(item => {
         item.classList.remove(className)
     });
