@@ -1,33 +1,11 @@
 // replace big image with small images when clicked
-const bigImage = document.querySelector('.large-image-container > img')
-const smallImages = document.querySelectorAll('.small-image > img')
 
-smallImages.forEach(smallImage => {
-    smallImage.addEventListener('click', ()=>{
-        removeActiveClassParent(smallImages, 'active')
-        smallImage.parentElement.classList.add('active')
-        bigImage.src = smallImage.src
-    })
-})
 // // full size image
 // const fullscreen = document.querySelector('.expand')
 // fullscreen.addEventListener('click', () => {
     
 // })
 
-// add reviews
-const reviewContainer = document.querySelector('.add-review-container')
-
-const addReview = document.querySelector('.add-review')
-
-const closeReview = document.querySelector('.close-review')
-
-addReview.addEventListener('click', () =>{
-    reviewContainer.classList.add('active')
-})
-closeReview.addEventListener('click', () =>{
-    reviewContainer.classList.remove('active')
-})
 
 // tabs for product page
 const tabBtns = document.querySelectorAll('.tab-btn')
@@ -42,8 +20,36 @@ tabBtns.forEach(tabBtn => {
         })
 })
 
+// rating, updated star color when clicked
+const stars = document.querySelectorAll('.add-review-form .stars > i')
+// index of clicked star
+stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+        // remove or add active to other stars
+        stars.forEach((preStar, preIdx) => {
+            if(preIdx <= index){
+                preStar.classList.add('active')
+            }
+            else{
+                preStar.classList.remove('active')
+            }
+        })
+    })
+})
+// add reviews
+const reviewContainer = document.querySelector('.add-review-container')
 
+const addReview = document.querySelector('.add-review')
 
+const closeReview = document.querySelector('.close-review')
+
+addReview.addEventListener('click', () =>{
+    reviewContainer.classList.add('active')
+})
+closeReview.addEventListener('click', () =>{
+    reviewContainer.classList.remove('active')
+    removeActiveClass(stars, 'active')
+})
 
 // general functions
 // remove active class

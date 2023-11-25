@@ -364,6 +364,8 @@ text-decoration: underline;
   .close-review{
     position: absolute;
     top: 10px;
+    right: 10px;
+    cursor: pointer;
   }
   .close-review i{
     font-size: 2rem;
@@ -394,6 +396,7 @@ text-decoration: underline;
     padding: 10px;
     resize: none;
     width: 100%;
+    font-size: 16px;
     color: var(--black);
 }
 .add-review-form .stars{
@@ -405,6 +408,12 @@ text-decoration: underline;
 .add-review-form .stars i{
     font-size: 30px;
     cursor: pointer;
+    color: lightgray;
+    transition: 0s;
+}
+.add-review-form .stars i.active{
+    color: gold;    transition: 0s;
+
 }
 .add-review-form h2{
     font-weight: 400;
@@ -443,6 +452,9 @@ text-decoration: underline;
 
 @media (max-width: 500px){
     p{
+        font-size: 14px;
+    }
+    textarea{
         font-size: 14px;
     }
 }
