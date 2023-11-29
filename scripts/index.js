@@ -8,10 +8,14 @@ smallImages.each((index, smallImage) => {
     removeActiveClass(bigImages, 'visible');
     $(smallImage).parent().addClass('active');
 
-    bigImages.each((index, bigImage) => {
+    bigImages.each((idx, bigImage) => {
       if ($(bigImage).attr('src') == $(smallImage).attr('src')) {
         $(bigImage).addClass('visible');
-      }
+      }        
+
+        var translateVal = index * -100;
+        var newTranslate = 'translateX('+ translateVal + '%)'
+        $(bigImage).css('transform', newTranslate)
     });
   });
 });
@@ -82,7 +86,7 @@ const reviewStarsSubmit = document.querySelectorAll('form .bi-star-fill.active')
 const textareaReviewSub = document.querySelector('.add-review-form textarea');
 
 if(reviewStarsSubmit.length == 0){
-  console.log('Enter star');
+  console.log("no star rating chosen");
 }
 
 else{
@@ -150,7 +154,6 @@ reviewBox.append(userProfile, ratingContent)
 
 const ratingReviewContainer = document.querySelector('.rating-review-container')
 ratingReviewContainer.appendChild(reviewBox)
-}
 
 alert('review added')
 
@@ -158,6 +161,8 @@ alert('review added')
   reviewContainer.removeClass('active');
   removeActiveClass(stars, 'active');
   textareaReview.val('');
+}
+
 })
 
 // const ratingReviewContainer = $('.rating-review-container')
